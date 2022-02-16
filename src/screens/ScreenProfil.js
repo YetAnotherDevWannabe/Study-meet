@@ -1,4 +1,5 @@
 import { Button, Text, View } from "react-native";
+import Dropdown from "../components/Dropdown.js"
 
 export default function ScreenProfil({route, navigation})
 {
@@ -6,7 +7,9 @@ export default function ScreenProfil({route, navigation})
 
 	return (
 		<View style={{flex:1, backgroundColor:'#9FF'}}>
-			<Text>ScreenProfil</Text>
+			<Text>Choisissez votre langue : </Text>
+		<Dropdown />
+		<Button>Valider</Button>
 		</View>
 	)
 }
