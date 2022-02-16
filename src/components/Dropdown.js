@@ -1,8 +1,7 @@
 import SelectDropdown from 'react-native-select-dropdown';
 import React from 'react';
 
-
-export const Dropdown = (props) =>
+export default function Dropdown ()
 {
     
     const countries = ["Français", "Anglais", "Espagnol", "Allemand"];
@@ -21,7 +20,6 @@ export const Dropdown = (props) =>
 
             return item
         }}
-    />)
+    />
+   )
 }
-
-export default Dropdown
