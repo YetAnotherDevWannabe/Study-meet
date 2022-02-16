@@ -1,20 +1,14 @@
 import React from "react";
-import "./Button.css";
+import "./StylizedButton.css";
 
 const STYLES = [
   "btn--primary--solid",
-  "btn--warning--solid",
-  "btn--danger--solid",
-  "btn--success--solid",
-  "btn--primary--outline",
-  "btn--warning--outline",
-  "btn--danger--outline",
-  "btn--success--outline"
+  "btn--primary--outline"
 ];
 
-const SIZES = ["btn--medium", "btn--large"];
+const SIZES = ["btn--small", "btn--medium", "btn--large"];
 
-export const Button = ({
+export const StylizedButton = ({
   children,
   type,
   onClick,
@@ -33,9 +27,11 @@ export const Button = ({
       onClick={onClick}
       type={type}
     >
+      <span>
       {children}
+      </span>
     </button>
   );
 };
 
-export default Button;
+export default StylizedButton;
