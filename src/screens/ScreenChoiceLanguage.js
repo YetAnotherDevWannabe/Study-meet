@@ -1,38 +1,53 @@
-import { Button, Image, Text, View, StyleSheet } from "react-native";
-import { ButtonStudent } from '../components/ButtonStudent.js';
+import { Image, Text, View, StyleSheet } from "react-native";
+import SelectLanguage from "../components/SelectLanguage.js";
+// import SelectDropdown from "react-native-select-dropdown";
+import SelectDropdown from 'react-native-select-dropdown';
 
-const styles = StyleSheet.create({
-	container: {
-	  paddingTop: 50,
-	},
-	tinyLogo: {
-	  width: 50,
-	  height: 50,
-	},
-	logo: {
-	  width: 66,
-	  height: 58,
-	},
-  });
+const countries = ["Egypt", "Canada", "Australia", "Ireland"];
 
-export default function ScreenChoiceLanguage({route, navigation})
+<SelectDropdown
+	data={countries}
+	onSelect={(selectedItem, index) => {
+		console.log(selectedItem, index)
+	}}
+	buttonTextAfterSelection={(selectedItem, index) => {
+		// text represented after item is selected
+		// if data array is an array of objects then return selectedItem.property to render after item is selected
+		return selectedItem
+	}}
+	rowTextForSelection={(item, index) => {
+		// text represented for each item in dropdown
+		// if data array is an array of objects then return item.property to represent item in dropdown
+		return item
+	}}
+/>
+
+
+// const styles = StyleSheet.create({
+// 	container: {
+// 	  paddingTop: 50,
+// 	},
+// 	tinyLogo: {
+// 	  width: 50,
+// 	  height: 50,
+// 	},
+// 	logo: {
+// 	  width: 66,
+// 	  height: 58,
+// 	},
+//   });
+
+export default function ScreenChoiceLanguage({route, App})
 {
 	console.log("Route", route)
 
 	return (
+		
 		<View style={{flex:1, backgroundColor:'#FFF'}}>
-			<Text>ScreenChoiceLanguage</Text>
-      		<ButtonStudent text='test' onPress={() => {
-				navigation.navigate('ScreenConnect')
-			}} />
 
-
-			{/* <Image
-				style={styles.logo}
-				source={{ uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
-				}}
-			>
-			</Image> */}
+			<Text>Sélctionnez votre langue :</Text>
+			<SelectDropdown />
 		</View>
-	)
+	)	
 }
+
