@@ -1,10 +1,10 @@
 import { Text, View } from "react-native";
 
-export default function MessagesScreen()
+export default function ScreenMessages()
 {
 	return (
 		<View style={{flex:1, backgroundColor:'#FF0'}}>
-			<Text>MessagesScreen</Text>
+			<Text>ScreenMessages</Text>
 		</View>
 	)
 }

@@ -5,7 +5,7 @@ import ScreenConnect from "../screens/ScreenConnect";
 
 const LoadingStackNav = createStackNavigator();
 
-export default function HomeNavigation()
+export default function LoadingStackNavigation()
 {
 	return (
 		<LoadingStackNav.Navigator screenOptions={{headerShown:false}} >

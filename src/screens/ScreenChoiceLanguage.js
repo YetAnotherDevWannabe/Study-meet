@@ -1,4 +1,5 @@
 import { Button, Image, Text, View, StyleSheet } from "react-native";
+import { ButtonStudent } from '../components/ButtonStudent.js';
 
 const styles = StyleSheet.create({
 	container: {
@@ -21,12 +22,17 @@ export default function ScreenChoiceLanguage({route, navigation})
 	return (
 		<View style={{flex:1, backgroundColor:'#FFF'}}>
 			<Text>ScreenChoiceLanguage</Text>
-			<Image
+      		<ButtonStudent text='test' onPress={() => {
+				navigation.navigate('ScreenConnect')
+			}} />
+
+
+			{/* <Image
 				style={styles.logo}
 				source={{ uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
 				}}
 			>
-			</Image>
+			</Image> */}
 		</View>
 	)
 }
