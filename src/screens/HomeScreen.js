@@ -40,7 +40,7 @@ export default function HomeScreen()
 					Transports
 				</Text>
 				<View style={styles.row}>
-					<Button>Chercher Transports</Button>
+					
 				</View>
 			</View>
 
