@@ -1,6 +1,4 @@
 import { Image, Text, View, StyleSheet } from "react-native";
-import SelectLanguage from "../components/SelectLanguage.js";
-// import SelectDropdown from "react-native-select-dropdown";
 import SelectDropdown from 'react-native-select-dropdown';
 
 const countries = ["Egypt", "Canada", "Australia", "Ireland"];
@@ -42,12 +40,11 @@ export default function ScreenChoiceLanguage({route, App})
 	console.log("Route", route)
 
 	return (
-		
 		<View style={{flex:1, backgroundColor:'#FFF'}}>
 
 			<Text>Sélctionnez votre langue :</Text>
 			<SelectDropdown />
 		</View>
-	)	
+	)
 }
 
