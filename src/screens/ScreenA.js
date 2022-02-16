@@ -7,12 +7,12 @@ export default function ScreenA({route, navigation})
 	return (
 		<View style={{flex:1, backgroundColor:'#FD0'}}>
 			<Text>ScreenA</Text>
-			<Button title="Access screen B" onPress={() => {
-				navigation.navigate('ScreenB')
+			<Button title="Access screen FAQ" onPress={() => {
+				navigation.navigate('ScreenFAQ')
 			}} />
-			<Button title="Access screen C" onPress={() => {
-				navigation.push('ScreenB')
-				navigation.navigate('ScreenC')
+			<Button title="Access screen Cconnect" onPress={() => {
+				navigation.push('ScreenFAQ')
+				navigation.navigate('ScreenConnect')
 			}} />
 		</View>
 	)
