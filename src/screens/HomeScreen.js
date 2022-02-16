@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
 	category: {
 		margin: 15,
 		fontWeight: "bold",
-		fontSize: "20px",
+		fontSize: 20,
 	},
 	row: {
 		flexDirection: "row",

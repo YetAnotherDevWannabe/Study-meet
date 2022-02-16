@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
 		margin: 5,
 		borderColor: "black",
 		borderRadius: 15,
-		borderWidth: "1px",
+		borderWidth: 1,
 		width: 300,
         shadowColor: "#adadad",
         shadowRadius: 2,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     },
 	bloc: {
 		display: "flex",
-		flexDirection: "initial",
+		// flexDirection: initial,
 	},
 	left: {
 		width: "25%",
@@ -66,11 +66,11 @@ const styles = StyleSheet.create({
 	title: {
 		color: "#972986",
 		fontWeight: "600",
-		fontSize: "16px",
+		fontSize: 16,
 	},
 	paragraph: {
 		color: "#525252",
-		fontSize: "12px",
+		fontSize: 12,
 		fontStyle: 'italic',
 	},
 });

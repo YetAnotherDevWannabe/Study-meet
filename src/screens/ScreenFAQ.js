@@ -36,7 +36,7 @@ export default function ScreenFAQ({route, navigation})
 const styles = StyleSheet.create({
 	category: {
 		paddingStart: 15,
-		fontSize: "20px",
+		fontSize: 20,
 	},
 });
 
