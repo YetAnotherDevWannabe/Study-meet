@@ -14,20 +14,6 @@ export default function ScreenFAQ({route, navigation})
 			</View>
 			<View style={styles.scroll}>
 				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
-				<DisplayCardQuestion></DisplayCardQuestion>
 			</View>
 		</View>
 	)

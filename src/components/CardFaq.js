@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     },
 	bloc: {
 		display: "flex",
-		// flexDirection: initial,
+		flexDirection: "row",
 	},
 	left: {
 		width: "25%",
