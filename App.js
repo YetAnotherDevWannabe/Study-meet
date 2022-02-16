@@ -26,7 +26,7 @@ export default function App() {
       <TabNav.Navigator screenOptions = {{headerShown: false}}>
         <TabNav.Screen name="Home" component={HomeScreen}/>
         <TabNav.Screen name="ScreenChoiceConnect" component={ScreenChoiceConnect}/>
-        <TabNav.Screen name="ScreenChoiceLanguage" component={ScreenChoiceLanguage}/>
+        {/* <TabNav.Screen name="ScreenChoiceLanguage" component={ScreenChoiceLanguage}/> */}
         <TabNav.Screen name="ScreenConnect" component={ScreenConnect}/>
         <TabNav.Screen name="ScreenMessages" component={ScreenMessages}/>
       </TabNav.Navigator>
