@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
 	profile: {
         marginBottom: 10,
 		alignItems: "center",
-    	height: "100%",
 	},
     img: {
         width: 70,

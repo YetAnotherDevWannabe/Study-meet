@@ -6,7 +6,7 @@ import DisplayCardQuestion from "../components/CardFaq";
 export default function HomeScreen()
 {
 	return (
-		<View style={{flex:1, overflow: "scroll", height: "100vh"}}>
+		<View style={{flex:1, backgroundColor: "red"}}>
 			<View >
 				<Text style={styles.category}>
 					Etudiants Proches

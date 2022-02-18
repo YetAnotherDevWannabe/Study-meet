@@ -6,13 +6,13 @@ export default function ScreenFAQ({route, navigation})
 	console.log("Route", route)
 
 	return (
-		<View style={{flex:1, overflow: "scroll", height: "100vh"}}>
-			<View style={styles.top}>
+		<View style={{flex:1, backgroundColor: "red"}}>
+			<View>
 				<Text style={styles.category}>
 					Communautaire
 				</Text>
 			</View>
-			<View style={styles.scroll}>
+			<View>
 				<DisplayCardQuestion></DisplayCardQuestion>
 			</View>
 		</View>

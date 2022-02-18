@@ -16,7 +16,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <TabNav.Navigator screenOptions = {{headerShown: false}}>
-        <TabNav.Screen
+          <TabNav.Screen
           name = "Home"
           component = { HomeScreen }
           options = {{ tabBarIcon: ({size, color}) => (<Icon name={"home-outline"} color={color} size={size} />) }}
@@ -35,7 +35,7 @@ export default function App() {
           name = "Profil"
           component = { ScreenProfil }
           options = {{ tabBarIcon: ({size, color}) => (<Icon name={"person-circle-outline"} color={color} size={size} />) }}
-        />
+        /> 
       </TabNav.Navigator>
     </NavigationContainer>
   );
