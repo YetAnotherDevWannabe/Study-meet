@@ -62,7 +62,7 @@ export default function ScreenConnect({route, navigation})
 const styles = StyleSheet.create({
 	container: {
 		flex:1, 
-		backgroundColor:'#FFF', 
+		backgroundColor:'#FCFCFC', 
 		paddingTop: 40,
 	},
 	input: {
@@ -77,11 +77,12 @@ const styles = StyleSheet.create({
 		marginBottom: 2,
 	},
 	textInput: {
-	  height: 45,
-	  borderWidth: 0.5,
-	  borderRadius: 10,
-	  padding: 10,
-	  color: "black",
+		backgroundColor: 'white',
+	  	height: 45,
+	  	borderWidth: 0.5,
+	  	borderRadius: 10,
+	  	padding: 10,
+	  	color: "black",
 	},
 	inputContainer: {
 		backgroundColor: 'white',
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
 		borderWidth: 0.5,
 	},
 	inputField: {
-		padding: 10,
+		padding: 9,
 		width: '90%'
 	},
 	imgBlock: {
