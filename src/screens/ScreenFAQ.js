@@ -12,7 +12,7 @@ export default function ScreenFAQ({route, navigation})
 					Communautaire
 				</Text>
 			</View>
-			<View>
+			<View style={styles.row}>
 				<DisplayCardQuestion></DisplayCardQuestion>
 			</View>
 		</View>
@@ -24,5 +24,8 @@ const styles = StyleSheet.create({
 		paddingStart: 15,
 		fontSize: 20,
 	},
+	row: {
+		flexDirection: "row",
+	}
 });
 

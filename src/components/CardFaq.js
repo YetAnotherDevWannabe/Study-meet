@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
 	},
 	right: {
 		width: "75%",
-    	height: "100%",
+    	// height: "100%",
 	},
 	img: {
 		backgroundColor: "white",
