@@ -1,12 +1,12 @@
 import React from 'react';
-import { Image, Text, View, TouchableOpacity, StyleSheet } from "react-native";
+import { Image, Text, View, TouchableOpacity, StyleSheet, } from "react-native";
 
 
-const DisplayCardQuestion = () => {
+const DisplayCardQuestion = (Props) => {
     return (
     <View style={{flex:1,}}>
         <View style={styles.cards}>
-            <TouchableOpacity style={styles.card}>
+            <TouchableOpacity style={styles.card}  onPress={()=>{Props.onPress(Props.id)}}>
                 <View style={styles.bloc}>
                     <View style={styles.left}>
                         <Image

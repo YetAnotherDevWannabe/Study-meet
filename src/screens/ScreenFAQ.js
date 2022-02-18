@@ -1,10 +1,15 @@
-import { Image, Text, View, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
+import { Image, Text, View, TouchableOpacity, StyleSheet, ScrollView, Button } from "react-native";
 import DisplayCardQuestion from "../components/CardFaq";
 import { hsc, wsc } from "../G";
 
 export default function ScreenFAQ({route, navigation})
 {
 	console.log("Route", route)
+
+	function onPressDisplay(id) {
+		console.log("Press",id)
+		navigation.navigate("Profil")
+	}
 
 	return (
 		<ScrollView style={styles.scrollView}>
@@ -16,7 +21,7 @@ export default function ScreenFAQ({route, navigation})
 				</View>
 				<View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion onPress={onPressDisplay} id={0}></DisplayCardQuestion>
 					</View>
 					<View style={styles.row}>
 						<DisplayCardQuestion></DisplayCardQuestion>
