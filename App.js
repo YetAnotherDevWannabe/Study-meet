@@ -9,6 +9,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import ScreenMessages from './src/screens/ScreenMessages';
 import ScreenFAQ from './src/screens/ScreenFAQ';
 import ScreenProfil from './src/screens/ScreenProfil';
+import ScreenConnect from './src/screens/ScreenConnect';
 
 const TabNav = createBottomTabNavigator();
 
@@ -16,6 +17,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <TabNav.Navigator screenOptions = {{headerShown: false}}>
+      <TabNav.Screen
+          name = "Connexion"
+          component = { ScreenConnect }
+          options = {{ tabBarIcon: ({size, color}) => (<Icon name={"log-in-outline"} color={color} size={size} />) }}
+        /> 
           <TabNav.Screen
           name = "Home"
           component = { HomeScreen }
