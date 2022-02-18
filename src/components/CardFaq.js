@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, Text, View, TouchableOpacity, StyleSheet } from "react-native";
 
+
 const DisplayCardQuestion = () => {
     return (
     <View style={{flex:1,}}>
@@ -27,7 +28,6 @@ const DisplayCardQuestion = () => {
 const styles = StyleSheet.create({
 	cards: {
 		alignItems: "center",
-    	// height: "100%",
 	},
     card: {
 		padding: 5,
@@ -51,11 +51,9 @@ const styles = StyleSheet.create({
 	left: {
 		width: "25%",
 		alignItems: "center",
-    	// height: "100%",
 	},
 	right: {
 		width: "75%",
-    	// height: "100%",
 	},
 	img: {
 		backgroundColor: "white",
