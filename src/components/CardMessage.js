@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Text, View, TouchableOpacity, StyleSheet, } from "react-native";
 
 
-const DisplayCardMessage = (Props) => {
+const DisplayCardMessage = (props) => {
 
     return (
     <View>
@@ -16,8 +16,8 @@ const DisplayCardMessage = (Props) => {
                         />
                     </View>
                     <View style={styles.right}>
-                        <Text style={styles.title}>Utilisateur</Text>
-                        <Text style={styles.paragraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor...</Text>
+                        <Text style={styles.title}>{props.user}</Text>
+                        <Text style={styles.paragraph}>{props.lastMsg}</Text>
                     </View>
                 </View>
             </TouchableOpacity>
