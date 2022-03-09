@@ -6,11 +6,6 @@ export default function ScreenFAQ({route, navigation})
 {
 	console.log("Route", route)
 
-	function onPressDisplay(id) {
-		console.log("Press",id)
-		navigation.navigate("Profil")
-	}
-
 	return (
 		<ScrollView style={styles.scrollView}>
 			<View style={styles.container}>
