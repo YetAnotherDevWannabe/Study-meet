@@ -21,7 +21,7 @@ export default function ScreenFAQ({route, navigation})
 				</View>
 				<View>
 					<View style={styles.row}>
-						<DisplayCardQuestion onPress={onPressDisplay} id={0}></DisplayCardQuestion>
+						<DisplayCardQuestion></DisplayCardQuestion>
 					</View>
 					<View style={styles.row}>
 						<DisplayCardQuestion></DisplayCardQuestion>
@@ -67,6 +67,9 @@ export default function ScreenFAQ({route, navigation})
 }
 
 const styles = StyleSheet.create({
+	container: {
+		paddingTop: 20,
+	},
 	scrollView: {
 		width: wsc,
 		height: hsc,
