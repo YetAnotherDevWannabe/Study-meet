@@ -98,7 +98,6 @@ const styles = StyleSheet.create({
 	},
 	category: {
 		fontSize: 20,
-		paddingLeft: 10,
 		margin: 10,
 		fontWeight: "bold",
 	},
