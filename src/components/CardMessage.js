@@ -2,21 +2,22 @@ import React from 'react';
 import { Image, Text, View, TouchableOpacity, StyleSheet, } from "react-native";
 
 
-const DisplayCardQuestion = (Props) => {
+const DisplayCardMessage = (Props) => {
+
     return (
-    <View style={{flex:1,}}>
+    <View>
         <View style={styles.cards}>
             <TouchableOpacity style={styles.card}>
                 <View style={styles.bloc}>
                     <View style={styles.left}>
                         <Image
                             style={styles.img}
-                            source={require('../../assets/question.png')}
+                            source = { require('../../assets/male.png')}
                         />
                     </View>
                     <View style={styles.right}>
-                        <Text style={styles.title}>Titre FAQ</Text>
-                        <Text style={styles.paragraph}>Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus.</Text>
+                        <Text style={styles.title}>Utilisateur</Text>
+                        <Text style={styles.paragraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor...</Text>
                     </View>
                 </View>
             </TouchableOpacity>
@@ -32,10 +33,7 @@ const styles = StyleSheet.create({
     card: {
 		padding: 5,
 		margin: 5,
-		borderColor: "black",
-		borderRadius: 15,
-		borderWidth: 1,
-		width: 300,
+		width: 350,
         shadowColor: "#adadad",
         shadowRadius: 2,
         shadowOpacity: 1,
@@ -49,11 +47,11 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 	},
 	left: {
-		width: "25%",
+		width: "30%",
 		alignItems: "center",
 	},
 	right: {
-		width: "75%",
+		width: "70%",
 	},
 	img: {
 		backgroundColor: "white",
@@ -73,4 +71,4 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default DisplayCardQuestion;
+export default DisplayCardMessage;
