@@ -16,16 +16,16 @@ export default function ScreenFAQ({route, navigation})
 				</View>
 				<View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<TouchableOpacity style={styles.plusInfo}>
 						<Text style={styles.contentInfo}>Voir Plus</Text>
@@ -38,19 +38,19 @@ export default function ScreenFAQ({route, navigation})
 				</View>
 				<View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<TouchableOpacity style={styles.plusInfoBot}>
 						<Text style={styles.contentInfo}>Voir Plus</Text>

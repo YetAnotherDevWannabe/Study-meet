@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Text, View, TouchableOpacity, StyleSheet, } from "react-native";
 
 
-const DisplayCardQuestion = (Props) => {
+const DisplayCardQuestion = (props) => {
     return (
     <View style={{flex:1,}}>
         <View style={styles.cards}>
@@ -15,8 +15,8 @@ const DisplayCardQuestion = (Props) => {
                         />
                     </View>
                     <View style={styles.right}>
-                        <Text style={styles.title}>Titre FAQ</Text>
-                        <Text style={styles.paragraph}>Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus.</Text>
+                        <Text style={styles.title}>{props.title}</Text>
+                        <Text style={styles.paragraph}>{props.desc}</Text>
                     </View>
                 </View>
             </TouchableOpacity>

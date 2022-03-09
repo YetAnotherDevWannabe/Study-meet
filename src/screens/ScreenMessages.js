@@ -19,40 +19,40 @@ const ScreenMessages = () => {
 					<MyComponent></MyComponent>
 				</View>
 				<View style={styles.row}>
-					<DisplayCardMessage></DisplayCardMessage>
+					<DisplayCardMessage user="Utilisateur" lastMsg="Nulla quis lorem ut libero malesuada feugiat..."/>
 				</View>
 				<View style={styles.row}>
-					<DisplayCardMessage></DisplayCardMessage>
+					<DisplayCardMessage user="Utilisateur" lastMsg="Nulla quis lorem ut libero malesuada feugiat..."/>
+				</View>
+					<View style={styles.row}>
+				<DisplayCardMessage user="Utilisateur" lastMsg="Nulla quis lorem ut libero malesuada feugiat..."/>
 				</View>
 				<View style={styles.row}>
-					<DisplayCardMessage></DisplayCardMessage>
+					<DisplayCardMessage user="Utilisateur" lastMsg="Nulla quis lorem ut libero malesuada feugiat..."/>
 				</View>
 				<View style={styles.row}>
-					<DisplayCardMessage></DisplayCardMessage>
+					<DisplayCardMessage user="Utilisateur" lastMsg="Nulla quis lorem ut libero malesuada feugiat..."/>
 				</View>
 				<View style={styles.row}>
-					<DisplayCardMessage></DisplayCardMessage>
+					<DisplayCardMessage user="Utilisateur" lastMsg="Nulla quis lorem ut libero malesuada feugiat..."/>
 				</View>
 				<View style={styles.row}>
-					<DisplayCardMessage></DisplayCardMessage>
+					<DisplayCardMessage user="Utilisateur" lastMsg="Nulla quis lorem ut libero malesuada feugiat..."/>
 				</View>
 				<View style={styles.row}>
-					<DisplayCardMessage></DisplayCardMessage>
+					<DisplayCardMessage user="Utilisateur" lastMsg="Nulla quis lorem ut libero malesuada feugiat..."/>
 				</View>
 				<View style={styles.row}>
-					<DisplayCardMessage></DisplayCardMessage>
+					<DisplayCardMessage user="Utilisateur" lastMsg="Nulla quis lorem ut libero malesuada feugiat..."/>
 				</View>
 				<View style={styles.row}>
-					<DisplayCardMessage></DisplayCardMessage>
+					<DisplayCardMessage user="Utilisateur" lastMsg="Nulla quis lorem ut libero malesuada feugiat..."/>
 				</View>
 				<View style={styles.row}>
-					<DisplayCardMessage></DisplayCardMessage>
+					<DisplayCardMessage user="Utilisateur" lastMsg="Nulla quis lorem ut libero malesuada feugiat..."/>
 				</View>
 				<View style={styles.row}>
-					<DisplayCardMessage></DisplayCardMessage>
-				</View>
-				<View style={styles.row}>
-					<DisplayCardMessage></DisplayCardMessage>
+					<DisplayCardMessage user="Utilisateur" lastMsg="Nulla quis lorem ut libero malesuada feugiat..."/>
 				</View>
 			</View>
 		</ScrollView>
