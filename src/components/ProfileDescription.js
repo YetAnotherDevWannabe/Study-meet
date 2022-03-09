@@ -1,14 +1,15 @@
 import { Text, View, StyleSheet, Image } from "react-native";
+import ChoixImage from "../components/ChoixImage";
 
 export default function ProfileDescription ()
 {
     return(
     <View style={{top: -50}}>
         <View style={styles.imgPro}>
-            <Image
-                        style={styles.img}
-                        source={require('../../assets/TestingGirl.jpg')}
-                    />
+            <ChoixImage>
+                
+            </ChoixImage>
+           
                 <Text style={styles.txtImg}>
                     Nom Prénom
                 </Text>
@@ -44,11 +45,11 @@ const styles = StyleSheet.create({
     desc: {
         textAlign: "center",
     },
-    img: {
-        width: 120,
-        height: 120,
-        borderRadius: 10,
-    },
+    // img: {
+    //     width: 120,
+    //     height: 120,
+    //     borderRadius: 10,
+    // },
     imgPro: {
         justifyContent: 'center',
         alignItems: 'center',
