@@ -72,7 +72,6 @@ const styles = StyleSheet.create({
 		fontWeight: "bold",
 		fontSize: 18,
 		color: "black",
-		textAlign: "center",
 	},
 	searchbar: {
 		marginBottom: 10,

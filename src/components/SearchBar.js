@@ -10,7 +10,7 @@ const MyComponent = () => {
 
   return (
     <Searchbar style={styles.searchbar}
-      placeholder="Recherche"
+      placeholder="Rechercher"
       onChangeText={onChangeSearch}
       value={searchQuery}
     />

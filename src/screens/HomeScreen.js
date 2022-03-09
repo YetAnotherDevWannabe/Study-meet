@@ -17,9 +17,9 @@ const imgMeal = Image.resolveAssetSource(meal).uri
 export default function HomeScreen()
 {
 	return (
-			<ScrollView>
-				<View style={{flex:1, backgroundColor: "white"}}>
-					<View style={{marginTop: 40}}>
+			<ScrollView style={styles.scrollView}>
+				<View style={styles.container}>
+					<View>
 						<Text style={styles.category}>
 							Etudiants Proches
 						</Text>
@@ -59,9 +59,11 @@ export default function HomeScreen()
 							Transports
 						</Text>
 						
-						<SearchBar/>
+						<View >
+							<SearchBar/>
+						</View>
 						<View style={styles.map}>
-							<WebView source={{html: '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d173134.47372387716!2d5.0060054!3d47.3099203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f29d8ceffd9675%3A0x409ce34b31458d0!2s21000%20Dijon!5e0!3m2!1sfr!2sfr!4v1646820129923!5m2!1sfr!2sfr" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'}} />	
+							<WebView source={{html: '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d173134.47372387716!2d5.0060054!3d47.3099203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f29d8ceffd9675%3A0x409ce34b31458d0!2s21000%20Dijon!5e0!3m2!1sfr!2sfr!4v1646820129923!5m2!1sfr!2sfr" width="100%" height="100%" style="" allowfullscreen="" loading="lazy"></iframe>'}} />	
 						</View >
 					</View>
 
@@ -69,8 +71,16 @@ export default function HomeScreen()
 						<Text style={styles.category}>
 							Actus UBFC
 						</Text>
-						<View style={styles.row}>
-							<DisplayCardQuestion></DisplayCardQuestion>
+						<View>
+							<View style={styles.row}>
+								<DisplayCardQuestion></DisplayCardQuestion>
+							</View>
+							<View style={styles.row}>
+								<DisplayCardQuestion></DisplayCardQuestion>
+							</View>
+							<View style={styles.row}>
+								<DisplayCardQuestion></DisplayCardQuestion>
+							</View>
 						</View>
 					</View>
 				</View>
@@ -80,23 +90,26 @@ export default function HomeScreen()
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
+		paddingTop: 20,
+	},
+	scrollView: {
+		width: wsc,
+		height: hsc,
 	},
 	category: {
-		fontWeight: "bold",
 		fontSize: 20,
+		paddingLeft: 10,
+		margin: 10,
+		fontWeight: "bold",
 	},
 	row: {
 		flexDirection: "row",
-		padding: 15,
 	},
 	map: {
-		width: wsc - 20,
-		height: 220,
-		display: "flex",
-		textAlign: "center",
+		marginTop: 15,
+		height: 300,
 	},
 	catSection: {
-		marginLeft: 10,
+		
 	}
 });
