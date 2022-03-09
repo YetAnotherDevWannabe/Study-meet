@@ -6,11 +6,6 @@ export default function ScreenFAQ({route, navigation})
 {
 	console.log("Route", route)
 
-	function onPressDisplay(id) {
-		console.log("Press",id)
-		navigation.navigate("Profil")
-	}
-
 	return (
 		<ScrollView style={styles.scrollView}>
 			<View style={styles.container}>
@@ -21,16 +16,16 @@ export default function ScreenFAQ({route, navigation})
 				</View>
 				<View>
 					<View style={styles.row}>
-						<DisplayCardQuestion onPress={onPressDisplay} id={0}></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<TouchableOpacity style={styles.plusInfo}>
 						<Text style={styles.contentInfo}>Voir Plus</Text>
@@ -43,19 +38,19 @@ export default function ScreenFAQ({route, navigation})
 				</View>
 				<View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<View style={styles.row}>
-						<DisplayCardQuestion></DisplayCardQuestion>
+						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 					</View>
 					<TouchableOpacity style={styles.plusInfoBot}>
 						<Text style={styles.contentInfo}>Voir Plus</Text>
@@ -67,6 +62,9 @@ export default function ScreenFAQ({route, navigation})
 }
 
 const styles = StyleSheet.create({
+	container: {
+		paddingTop: 20,
+	},
 	scrollView: {
 		width: wsc,
 		height: hsc,

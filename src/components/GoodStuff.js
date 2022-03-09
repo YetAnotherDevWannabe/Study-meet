@@ -1,14 +1,14 @@
 import React from 'react';
 import { Image, Text, View, TouchableOpacity, StyleSheet } from "react-native";
 
-const DisplayGoodStuff = () => {
+const DisplayGoodStuff = (props) => {
     return (
     <View style={{flex:1}}>
         <TouchableOpacity style={styles.card}>
             <View style={styles.meal}>
                 <Image
                     style={styles.img}
-                    source={require('../../assets/Meal.jpg')}
+                    source={{uri:props.image}}
                 />
             </View>
         </TouchableOpacity>
