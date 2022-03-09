@@ -1,17 +1,19 @@
 import React from 'react';
 import { Image, Text, View, TouchableOpacity, StyleSheet } from "react-native";
 
-const DisplayNearStudent = () => {
+const DisplayNearStudent = (props) => {
     return (
-    <View style={{flex:1}}>
+    <View style={{flex:1, marginEnd: 10, marginStart: 10}}>
         <TouchableOpacity style={styles.card}>
             <View style={styles.profile}>
+                
                 <Image
                     style={styles.img}
-                    source={require('../../assets/TestingGirl.jpg')}
+                    source={{uri:props.image}}
                 />
-                <Text>
-                    Jena
+               
+                <Text style={styles.text}>
+                    {props.text}
                 </Text>
             </View>
         </TouchableOpacity>
@@ -23,11 +25,16 @@ const styles = StyleSheet.create({
 	profile: {
         marginBottom: 10,
 		alignItems: "center",
+        width: 80,
+        height: 100,
 	},
     img: {
         width: 70,
         height: 70,
         borderRadius: 10,
+    },
+    text: {
+        textAlign: "center",
     }
 });
 

@@ -1,21 +1,36 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Image, Text, View, StyleSheet, ScrollView } from "react-native";
 import DisplayNearStudent from "../components/NearStudent";
 import DisplayGoodStuff from "../components/GoodStuff";
 import DisplayCardQuestion from "../components/CardFaq";
 
+import { hsc, wsc } from "../G";
+
+import img from './../../assets/TestingGirl.jpg'
+const imgTest = Image.resolveAssetSource(img).uri
+
+import meal from './../../assets/Meal.jpg'
+const imgMeal = Image.resolveAssetSource(meal).uri
+
 export default function HomeScreen()
 {
 	return (
-			<View style={{flex:1, backgroundColor: "red"}}>
-				<View >
+			<View style={{flex:1, backgroundColor: "white"}}>
+				<View style={{marginTop: 40}}>
 					<Text style={styles.category}>
 						Etudiants Proches
 					</Text>
 					<View style={styles.row}>
-						<DisplayNearStudent></DisplayNearStudent>
-						<DisplayNearStudent></DisplayNearStudent>
-						<DisplayNearStudent></DisplayNearStudent>
-						<DisplayNearStudent></DisplayNearStudent>
+						<ScrollView horizontal showsHorizontalScrollIndicator={false} >
+							<DisplayNearStudent image={imgTest} text="User"/>
+							<DisplayNearStudent image={imgTest} text="User"/>
+							<DisplayNearStudent image={imgTest} text="User"/>
+							<DisplayNearStudent image={imgTest} text="User"/>
+							<DisplayNearStudent image={imgTest} text="User"/>
+							<DisplayNearStudent image={imgTest} text="User"/>
+							<DisplayNearStudent image={imgTest} text="User"/>
+							<DisplayNearStudent image={imgTest} text="User"/>
+							<DisplayNearStudent image={imgTest} text="Emma S. Fitzgerald"/>
+						</ScrollView>
 					</View>
 				</View>
 
@@ -68,5 +83,7 @@ const styles = StyleSheet.create({
 	},
 	row: {
 		flexDirection: "row",
+		flexWrap: "wrap",
+		width: wsc,
 	}
 });
