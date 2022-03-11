@@ -58,7 +58,7 @@ export default function ScreenProfil()
 			</View>
 		</ScrollView>
 	)
-} 
+}
 
 
 const styles = StyleSheet.create({

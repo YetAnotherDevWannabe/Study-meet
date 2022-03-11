@@ -18,7 +18,7 @@ export default function ProfileDescription ()
             <Text style={styles.desc}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus rhoncus laoreet.
                 Donec interdum risus quis magna scelerisque, eget tristique eros sagittis.
-                Aliquam id elementum ligula. 
+                Aliquam id elementum ligula.
             </Text>
         </View>
         <View style={styles.rowTxt}>
