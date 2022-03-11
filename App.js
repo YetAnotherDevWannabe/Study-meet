@@ -7,9 +7,11 @@ import Icon from 'react-native-vector-icons/Ionicons';
 // import Screens
 import HomeScreen from './src/screens/HomeScreen';
 import ScreenMessages from './src/screens/ScreenMessages';
+import ScreenConversation from './src/screens/ScreenConversation';
 import ScreenFAQ from './src/screens/ScreenFAQ';
 import ScreenProfil from './src/screens/ScreenProfil';
 import ScreenConnect from './src/screens/ScreenConnect';
+import ConversationNavigation from "./src/navigation/ConversationNavigation";
 
 const TabNav = createBottomTabNavigator();
 
@@ -29,7 +31,7 @@ export default function App() {
         />
         <TabNav.Screen
           name = "Messages"
-          component = { ScreenMessages }
+          component = { ConversationNavigation }
           options = {{ tabBarIcon: ({size, color}) => (<Icon name={"chatbubbles-outline"} color={color} size={size} />) }}
         />
         <TabNav.Screen
