@@ -1,13 +1,74 @@
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 import { Button, Text, View, Pressable, Image, SafeAreaView, StyleSheet, TextInput, TouchableOpacity } from "react-native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useTogglePasswordVisibility } from '../hooks/useTogglePasswordVisibility';
+import {useNavigation} from '@react-navigation/native';
 
-export default function ScreenConnect({route, navigation})
+export default function ScreenConnect({route})
 {
 
 	const { passwordVisibility, rightIcon, handlePasswordVisibility } = useTogglePasswordVisibility();
   	const [password, setPassword] = useState('');
+	const [email, setEmail] = useState('');
+	const [validating, setValidating] = useState(false);
+	const navigation = useNavigation();
+
+	const validate =()=> {
+		setValidating(true);
+
+		let formData = new FormData();
+		formData.append('type', 'login');
+		formData.append('email', email);
+		formData.append('password', password);
+
+		return fetch('https://dev-api-study-meet.pantheonsite.io/authentication.php', {
+			method: 'POST',
+			body: formData
+		})
+			.then((response) => {
+				// console.log(response);
+				return response.json()})
+			.then((responseJson) => {
+				// console.log(responseJson);
+				let data = responseJson.data;
+
+				if (saveToStorage(data))
+				{
+					setValidating(false);
+					/* Redirect to accounts page */
+					console.log('HomeScreen');
+					navigation.navigate('HomeScreen');
+					return true;
+				}
+				else
+				{
+					console.log('Failed to store auth');
+				}
+			})
+			.catch((error) => {
+				console.error(error);
+			});
+	}
+
+
+
+	const saveToStorage = async (userData) => {
+		if (userData)
+		{
+			await AsyncStorage.setItem('user', JSON.stringify({
+					isLoggedIn: true,
+					authToken: userData.auth_token,
+					id: userData.user_id,
+					name: userData.user_login
+				})
+			);
+			console.log(userData.user_login);
+			return true;
+		}
+
+		return false;
+	}
 
 	return (
 		<View style={styles.container}>
@@ -19,6 +80,9 @@ export default function ScreenConnect({route, navigation})
 					<Text style={styles.text}>Adresse Mail</Text>
 					<TextInput
 						style={styles.textInput}
+						autoCapitalize="none"
+						value={email}
+						onChangeText={(text) => setEmail(text)}
 					/>
 				</View>
 				<View style={styles.input}>
@@ -26,14 +90,13 @@ export default function ScreenConnect({route, navigation})
 					<View style={styles.inputContainer}>
 						<TextInput
 							autoCorrect={false}
-							secureTextEntry={true}
 							style={styles.inputField}
 							autoCapitalize="none"
-							autoCorrect={false}
 							textContentType="newPassword"
-							secureTextEntry={passwordVisibility}
 							value={password}
 							enablesReturnKeyAutomatically
+							// secureTextEntry={true}
+							secureTextEntry={passwordVisibility}
 							onChangeText={text => setPassword(text)}
 						/>
 						<Pressable onPress={handlePasswordVisibility}>
@@ -43,26 +106,36 @@ export default function ScreenConnect({route, navigation})
 				</View>
 				<View style={styles.buttonBlock}>
 					<View style={styles.account}>
-						<Text>Vous n’avez pas de compte ?</Text>
+						<Text>Vous n'avez pas de compte ?</Text>
 						<TouchableOpacity>
-							<Text style={styles.signup}> Inscrivez-vous</Text>
-						</TouchableOpacity>	
+							<Text style={styles.signup} onPress={() => { navigation.navigate('ScreenConnect') }}> Inscrivez-vous</Text>
+						</TouchableOpacity>
 					</View>
-					<Button
+					<Button block success
 						style={styles.button}
-						title="Se Connecter" 
+						title="Se Connecter"
 						color="#BF53A9"
-						accessibilityLabel="Learn more about this purple button"/>
+						accessibilityLabel="Learn more about this purple button"
+						onPress={() => {
+							if( email && password ){
+								validate();
+							}
+							else{
+								console.warn('Entrer email et password');
+							}
+						}}/>
 				</View>
 			</SafeAreaView>
 		</View>
 	)
+
+
 }
 
 const styles = StyleSheet.create({
 	container: {
-		flex:1, 
-		backgroundColor:'#FCFCFC', 
+		flex:1,
+		backgroundColor:'#FCFCFC',
 		paddingTop: 40,
 	},
 	input: {
@@ -93,7 +166,8 @@ const styles = StyleSheet.create({
 		borderWidth: 0.5,
 	},
 	inputField: {
-		padding: 9,
+		height: 45,
+		padding: 10,
 		width: '90%'
 	},
 	imgBlock: {
@@ -121,9 +195,3 @@ const styles = StyleSheet.create({
 		borderRadius: 30,
 	}
   });
-  
-//  button: {
-// 	color: "white",
-// 	fontWeight: "bold",
-// 	backgroundColor: "#BF53A9",
-// }
