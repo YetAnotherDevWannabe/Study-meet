@@ -76,29 +76,29 @@ const Messages = [
 const ScreenMessages = ( { route, navigation } ) => {
 	console.log("Route", route)
 	return (
-			<Container style={{marginTop: 30}}>
-				<FlatList
-					showsVerticalScrollIndicator={false}
-					data={Messages}
-					keyExtractor={item=>item.id}
-					renderItem={({item}) => (
-						<Card onPress={() => navigation.navigate('Conversation', {userName: item.userName})}>
-							<UserInfo>
-								<UserImgWrapper>
-									<UserImg source={item.userImg}/>
-								</UserImgWrapper>
-								<TextSection>
-									<UserInfoText>
-										<UserName>{item.userName}</UserName>
-										<PostTime>{item.messageTime}</PostTime>
-									</UserInfoText>
-									<MessageText>{item.messageText}</MessageText>
-								</TextSection>
-							</UserInfo>
-						</Card>
-					)}
-				/>
-			</Container>
+		<Container style={{marginTop: 30}}>
+			<FlatList
+				showsVerticalScrollIndicator={false}
+				data={Messages}
+				keyExtractor={item=>item.id}
+				renderItem={({item}) => (
+					<Card onPress={() => navigation.navigate('Conversation', {userName: item.userName})}>
+						<UserInfo>
+							<UserImgWrapper>
+								<UserImg source={item.userImg}/>
+							</UserImgWrapper>
+							<TextSection>
+								<UserInfoText>
+									<UserName>{item.userName}</UserName>
+									<PostTime>{item.messageTime}</PostTime>
+								</UserInfoText>
+								<MessageText>{item.messageText}</MessageText>
+							</TextSection>
+						</UserInfo>
+					</Card>
+				)}
+			/>
+		</Container>
 	)
 }
 
