@@ -14,7 +14,7 @@ export default function ChoixImage() {
       quality: 1,
     });
 
-    console.log(result);
+    console.log(result.uri);
 
     if (!result.cancelled) {
       setImage(result.uri);
