@@ -10,11 +10,13 @@ const ScreenMessages = () => {
 
 		<ScrollView style={styles.scrollView}>
 			<View style={styles.container}>
-				<View >
+
+				<View style={styles.blockTile} >
 					<Text style={styles.title}>
-					Messagerie :
+						Messagerie :
 					</Text>
 				</View>
+
 				<View style={styles.searchbar}>
 					<MyComponent></MyComponent>
 				</View>
