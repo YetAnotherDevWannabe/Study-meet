@@ -11,7 +11,9 @@ import ScreenConversation from './src/screens/ScreenConversation';
 import ScreenFAQ from './src/screens/ScreenFAQ';
 import ScreenProfil from './src/screens/ScreenProfil';
 import ScreenConnect from './src/screens/ScreenConnect';
+
 import ConversationNavigation from "./src/navigation/ConversationNavigation";
+import LoginStackNavigation from "./src/navigation/LoginStackNavigation";
 
 const TabNav = createBottomTabNavigator();
 
@@ -21,7 +23,7 @@ export default function App() {
       <TabNav.Navigator screenOptions = {{headerShown: false}}>
       <TabNav.Screen
           name = "Connexion"
-          component = { ScreenConnect }
+          component = { LoginStackNavigation }
           options = {{ tabBarIcon: ({size, color}) => (<Icon name={"log-in-outline"} color={color} size={size} />) }}
         /> 
           <TabNav.Screen

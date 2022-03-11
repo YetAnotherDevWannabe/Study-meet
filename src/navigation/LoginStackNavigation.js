@@ -4,12 +4,12 @@ import ScreenConnect from "../screens/ScreenConnect";
 
 const LoginStackNav = createStackNavigator();
 
-export default function LoginStackNav()
+export default function LoginStackNavigation()
 {
 	return (
 		<LoginStackNav.Navigator screenOptions={{headerShown:false}} >
-			<LoginStackNav.Screen name="HomeScreen" component={HomeScreen} />
 			<LoginStackNav.Screen name="ScreenConnect" component={ScreenConnect} />
+			<LoginStackNav.Screen name="HomeScreen" component={HomeScreen} />
 		</LoginStackNav.Navigator>
 	)
 }
