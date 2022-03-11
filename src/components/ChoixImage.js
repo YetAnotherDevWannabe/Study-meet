@@ -10,7 +10,7 @@ export default function ChoixImage() {
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
-      aspect: [4, 3],
+      aspect: [4, 4],
       quality: 1,
     });
 
@@ -21,18 +21,19 @@ export default function ChoixImage() {
     }
   };
 
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
 
-      {image && <Image source={{ uri: image }} style={styles.img}/>}
+        {image && <Image source={{ uri: image }} style={styles.img}/>}
 
-         
-        <View style={styles.lol}>
-            <Text onPress={pickImage} style={{color: "#fff"}}>+</Text>
-        </View>
-    </View>
+          
+          <View style={styles.lol}>
+              <Text onPress={pickImage} style={{color: "#fff"}}>+</Text>
+          </View>
+      </View>
+    )
+  }
 
-  )}
 
 const styles = StyleSheet.create({
     img: {
