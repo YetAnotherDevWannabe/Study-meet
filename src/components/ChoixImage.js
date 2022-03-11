@@ -14,7 +14,7 @@ export default function ChoixImage() {
       quality: 1,
     });
 
-    console.log(result);
+    console.log(result.uri);
 
     if (!result.cancelled) {
       setImage(result.uri);
@@ -24,9 +24,9 @@ export default function ChoixImage() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
 
+
       {image && <Image source={{ uri: image }} style={styles.img}/>}
 
-         
         <View style={styles.lol}>
             <Text onPress={pickImage} style={{color: "#fff"}}>+</Text>
         </View>

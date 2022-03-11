@@ -58,7 +58,6 @@ export default function HomeScreen()
 						<Text style={styles.category}>
 							Transports
 						</Text>
-						
 						<View >
 							<SearchBar/>
 						</View>
@@ -73,13 +72,13 @@ export default function HomeScreen()
 						</Text>
 						<View>
 							<View style={styles.row}>
-								<DisplayCardQuestion></DisplayCardQuestion>
+								<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 							</View>
 							<View style={styles.row}>
-								<DisplayCardQuestion></DisplayCardQuestion>
+								<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 							</View>
 							<View style={styles.row}>
-								<DisplayCardQuestion></DisplayCardQuestion>
+								<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
 							</View>
 						</View>
 					</View>

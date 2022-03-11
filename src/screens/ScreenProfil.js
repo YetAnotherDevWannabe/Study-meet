@@ -1,9 +1,15 @@
-import { Text, View, StyleSheet, ScrollView } from "react-native";
+import { Image, Text, View, StyleSheet, ScrollView } from "react-native";
 import ImageBg from "../components/ImageBg.js"
 import DisplayGoodStuff from "../components/GoodStuff";
 import ProfileDescription from "../components/ProfileDescription.js";
 import DisplayNearStudent from "../components/NearStudent";
 import {hsc, wsc} from "../G.js";
+
+import img from './../../assets/TestingGirl.jpg'
+const imgTest = Image.resolveAssetSource(img).uri
+
+import meal from './../../assets/Meal.jpg'
+const imgMeal = Image.resolveAssetSource(meal).uri
 
 export default function ScreenProfil()
 {
@@ -25,14 +31,14 @@ export default function ScreenProfil()
 						</Text>
 					</View>
 					<View style={styles.row}>
-						<DisplayGoodStuff></DisplayGoodStuff>
-						<DisplayGoodStuff></DisplayGoodStuff>
-						<DisplayGoodStuff></DisplayGoodStuff>
+						<DisplayGoodStuff image={imgMeal}/>
+						<DisplayGoodStuff image={imgMeal}/>
+						<DisplayGoodStuff image={imgMeal}/>
 					</View>
 					<View style={styles.row}>
-						<DisplayGoodStuff></DisplayGoodStuff>
-						<DisplayGoodStuff></DisplayGoodStuff>
-						<DisplayGoodStuff></DisplayGoodStuff>
+						<DisplayGoodStuff image={imgMeal}/>
+						<DisplayGoodStuff image={imgMeal}/>
+						<DisplayGoodStuff image={imgMeal}/>
 					</View>
 				</View>
 				<View>
@@ -41,10 +47,10 @@ export default function ScreenProfil()
 						Contact.
 					</Text>
 					<View style={styles.row}>
-						<DisplayNearStudent></DisplayNearStudent>
-						<DisplayNearStudent></DisplayNearStudent>
-						<DisplayNearStudent></DisplayNearStudent>
-						<DisplayNearStudent></DisplayNearStudent>
+						<DisplayNearStudent image={imgTest}/>
+						<DisplayNearStudent image={imgTest}/>
+						<DisplayNearStudent image={imgTest}/>
+						<DisplayNearStudent image={imgTest}/>
 					</View>
 				</View>
 				</View>
@@ -52,7 +58,7 @@ export default function ScreenProfil()
 			</View>
 		</ScrollView>
 	)
-} 
+}
 
 
 const styles = StyleSheet.create({
