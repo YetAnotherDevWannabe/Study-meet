@@ -42,19 +42,19 @@ export default function ScreenProfil()
 					</View>
 				</View>
 				<View>
-				<View >
 					<Text style={styles.txtInterets}>
 						Contact.
 					</Text>
 					<View style={styles.row}>
-						<DisplayNearStudent image={imgTest}/>
-						<DisplayNearStudent image={imgTest}/>
-						<DisplayNearStudent image={imgTest}/>
-						<DisplayNearStudent image={imgTest}/>
+						<ScrollView horizontal showsHorizontalScrollIndicator={false} >
+								<DisplayNearStudent image={imgTest} text="User"/>
+								<DisplayNearStudent image={imgTest} text="User"/>
+								<DisplayNearStudent image={imgTest} text="User"/>
+								<DisplayNearStudent image={imgTest} text="User"/>
+							</ScrollView>
+						</View>
 					</View>
 				</View>
-				</View>
-			</View>
 			</View>
 		</ScrollView>
 	)
