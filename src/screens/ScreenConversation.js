@@ -9,23 +9,23 @@ const ScreenConversation = () => {
     useEffect(() => {
         setMessages([
         {
-            _id: 2,
-            text: 'Hello developer',
+            _id: 1,
+            text: 'Un céréale killer…',
             createdAt: new Date(),
             user: {
-            _id: 1,
-            name: 'React Native',
-            avatar: 'https://placeimg.com/140/140/any',
+                _id: 2,
+                name: 'React Native',
+                avatar: 'https://placeimg.com/140/140/any',
             },
         },
         {
-            _id: 1,
-            text: 'Hello developer',
+            _id: 2,
+            text: 'Qu’est-ce qu’un homme avec une mitraillette dans un champ de blé ?',
             createdAt: new Date(),
             user: {
-            _id: 2,
-            name: 'React Native',
-            avatar: 'https://placeimg.com/140/140/any',
+                _id: 1,
+                name: 'React Native',
+                avatar: 'https://placeimg.com/140/140/any',
             },
         },
         ])
@@ -56,14 +56,23 @@ const ScreenConversation = () => {
             {...props}
             wrapperStyle={{
                 right: {
-                    backgroundColor: '#2e64e5',
+                    backgroundColor: '#e1aa78',
                 },
+                left: {
+                    backgroundColor: '#e178c6',
+                }
             }}
             textStyle={{
                 right: {
                     color: '#fff',
                 },
+                left: {
+                    color: '#fff',
+                }
             }}
+            timeTextStyle={{
+                left: { color: 'white' }
+              }}
             />
             );
         };
