@@ -5,6 +5,7 @@ import ProfileDescription from "../components/ProfileDescription.js";
 import DisplayNearStudent from "../components/NearStudent";
 import {hsc, wsc} from "../G.js";
 
+
 import img from './../../assets/TestingGirl.jpg'
 const imgTest = Image.resolveAssetSource(img).uri
 
@@ -51,12 +52,13 @@ export default function ScreenProfil()
 								<DisplayNearStudent image={imgTest} text="User"/>
 								<DisplayNearStudent image={imgTest} text="User"/>
 								<DisplayNearStudent image={imgTest} text="User"/>
-							</ScrollView>
-						</View>
+						</ScrollView>
 					</View>
+
 				</View>
 			</View>
-		</ScrollView>
+		</View>
+	</ScrollView>
 	)
 }
 

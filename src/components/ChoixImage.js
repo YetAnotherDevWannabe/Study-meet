@@ -12,7 +12,7 @@ export default function ChoixImage() {
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
-      aspect: [4, 3],
+      aspect: [4, 4],
       quality: 1,
     });
 
@@ -26,8 +26,11 @@ export default function ChoixImage() {
   return (
     <View style={styles.propsAvatar}>
 
+        {image && <Image source={{ uri: image }} style={styles.img}/>}
 
-      {image && <Image source={{ uri: image }} style={styles.img}/>}
+          <View style={styles.lol}>
+              <Text onPress={pickImage} style={{color: "#fff"}}>+</Text>
+          </View>
 
         <View style={styles.btnAdd}>
             <Text onPress={pickImage} style={styles.btnInput}  >+</Text>
@@ -37,7 +40,8 @@ export default function ChoixImage() {
   )}
 
 const styles = StyleSheet.create({
-  propsAvatar: { 
+
+  propsAvatar: {
     alignItems: 'center',
     justifyContent: 'center',
     borderColor: "black",

@@ -1,5 +1,7 @@
 import { Text, View, StyleSheet, Image } from "react-native";
 import ChoixImage from "../components/ChoixImage";
+import Description from "../components/DescriptionProfile"
+import NomPrenom from "../components/NomPrenom"
 
 export default function ProfileDescription ()
 {
@@ -10,16 +12,11 @@ export default function ProfileDescription ()
                 
             </ChoixImage>
            
-                <Text style={styles.txtImg}>
-                    Nom Prénom
-                </Text>
-            </View>
+            <NomPrenom style={styles.txtImg}/>
+
+        </View>
         <View>
-            <Text style={styles.desc}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus rhoncus laoreet.
-                Donec interdum risus quis magna scelerisque, eget tristique eros sagittis.
-                Aliquam id elementum ligula.
-            </Text>
+        <Description style={styles.desc}/>
         </View>
         <View style={styles.rowTxt}>
             <Text>
