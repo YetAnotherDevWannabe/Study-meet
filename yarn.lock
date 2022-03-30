@@ -3708,7 +3708,7 @@ crypto-random-string@^2.0.0:
 
 css-color-keywords@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.npmjs.org/css-color-keywords/-/css-color-keywords-1.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/css-color-keywords/-/css-color-keywords-1.0.0.tgz#fea2616dc676b2962686b3af8dbdbe180b244e05"
   integrity sha1-/qJhbcZ2spYmhrOvjb2+GAskTgU=
 
 css-in-js-utils@^2.0.0:
