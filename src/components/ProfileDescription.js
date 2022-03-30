@@ -8,15 +8,12 @@ export default function ProfileDescription ()
     return(
     <View style={{top: -50}}>
         <View style={styles.imgPro}>
-            <ChoixImage>
-                
-            </ChoixImage>
-           
+            <ChoixImage> </ChoixImage>
             <NomPrenom style={styles.txtImg}/>
 
         </View>
         <View>
-        <Description style={styles.desc}/>
+            <Description style={styles.desc}/>
         </View>
         <View style={styles.rowTxt}>
             <Text>
@@ -42,11 +39,6 @@ const styles = StyleSheet.create({
     desc: {
         textAlign: "center",
     },
-    // img: {
-    //     width: 120,
-    //     height: 120,
-    //     borderRadius: 10,
-    // },
     imgPro: {
         justifyContent: 'center',
         alignItems: 'center',
