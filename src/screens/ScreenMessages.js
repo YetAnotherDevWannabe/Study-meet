@@ -26,7 +26,8 @@ const Messages = [
 		messageTime: "44min ago",
 		messageText:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis pulvinar augue."
-	},{
+	}
+	,{
 		id: "4",
 		userName: "Al Doe",
 		userImg: require("../../assets/userImg/user-4.jpg"),
