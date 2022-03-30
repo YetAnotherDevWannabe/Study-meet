@@ -12,8 +12,28 @@ const imgTest = Image.resolveAssetSource(img).uri
 import meal from './../../assets/Meal.jpg'
 const imgMeal = Image.resolveAssetSource(meal).uri
 
+
+// const test =()=> {
+
+	// fetch('https://dev-api-study-meet.pantheonsite.io/wp-json/wp/v2/users/me')
+	// 	.then((response) => {
+	// 		// console.log(response);
+	// 		return response.json();
+
+	// 	})
+	// 	.then((data) => {
+	// 		console.log(data);
+	// 	})
+	// 	.catch((error) => {
+	// 		console.log(error);
+	// 	});
+// }
+// test(); 
+
 export default function ScreenProfil()
 {
+
+
 	return (
 
 		<ScrollView>

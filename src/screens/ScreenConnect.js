@@ -11,6 +11,7 @@ export default function ScreenConnect({route})
 	const { passwordVisibility, rightIcon, handlePasswordVisibility } = useTogglePasswordVisibility();
   	const [password, setPassword] = useState('');
 	const [email, setEmail] = useState('');
+	const [erreur, setErreur] = useState('');
 	const [validating, setValidating] = useState(false);
 	const navigation = useNavigation();
 
@@ -30,21 +31,22 @@ export default function ScreenConnect({route})
 				// console.log(response);
 				return response.json()})
 			.then((responseJson) => {
-				// console.log(responseJson);
-				let data = responseJson.data;
+				// console.warn(responseJson);
+				let userData = responseJson.data;
+				// console.log(userData);
 
-				if (saveToStorage(data))
+				if (userData && saveToStorage(userData))
 				{
 					setValidating(false);
 					/* Redirect to accounts page */
-					console.log('HomeScreen');
-					navigation.navigate('HomeScreen');
+					// console.log('Home');
+					navigation.navigate('Home');
 					return true;
-				}
-				else
-				{
-					console.log('Failed to store auth');
-				}
+				} 
+				/* A log message that is used to debug the code. */
+				// console.log('Failed to store auth');
+				setErreur('Email ou Mot de passe incorrect');
+				return false;
 			})
 			.catch((error) => {
 				console.error(error);
@@ -63,10 +65,9 @@ export default function ScreenConnect({route})
 					name: userData.user_login
 				})
 			);
-			console.log(userData.user_login);
+			// console.log(userData.user_login);
 			return true;
 		}
-
 		return false;
 	}
 
@@ -115,15 +116,18 @@ export default function ScreenConnect({route})
 						style={styles.button}
 						title="Se Connecter"
 						color="#BF53A9"
-						accessibilityLabel="Learn more about this purple button"
+						accessibilityLabel="Se Connecter"
 						onPress={() => {
 							if( email && password ){
 								validate();
 							}
 							else{
-								console.warn('Entrer email et password');
+								console.warn('Entrer email et mot de passe');
 							}
 						}}/>
+						<View>
+							<Text style={styles.error}>{erreur}</Text>
+						</View>
 				</View>
 			</SafeAreaView>
 		</View>
@@ -148,6 +152,13 @@ const styles = StyleSheet.create({
 		fontWeight: "bold",
 		marginStart: 15,
 		marginBottom: 2,
+	},
+	error: {
+		fontSize: 16,
+		fontWeight: "bold",
+		margin: 15,
+		textAlign: "center",
+		color: '#FF0000',
 	},
 	textInput: {
 		backgroundColor: 'white',
