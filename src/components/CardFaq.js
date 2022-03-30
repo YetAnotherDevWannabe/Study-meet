@@ -1,13 +1,40 @@
 import React from 'react';
-import { Image, Text, View, TouchableOpacity, StyleSheet, } from "react-native";
+import { Image, Text, View, TouchableHighlight, StyleSheet, } from "react-native";
 
 
 const DisplayCardQuestion = (props) => {
+
+	var [ isPress, setIsPress ] = React.useState(false);
+
+  var touchProps = {
+    activeOpacity: 1,
+    underlayColor: '',
+	style: isPress ? styles.cardPress : styles.card,
+	// style: isPress ? styles.paragraphPress : styles.paragraph,
+    onHideUnderlay: () => setIsPress(false),
+    onShowUnderlay: () => setIsPress(true),
+    onPress: () => console.log('HELLO'),
+  };
+
+  var touchText = {
+    activeOpacity: 1,
+    underlayColor: '',
+	// style: isPress ? styles.cardPress : styles.card,
+	style: isPress ? styles.paragraphPress : styles.paragraph,
+    onHideUnderlay: () => setIsPress(false),
+    onShowUnderlay: () => setIsPress(true),
+    onPress: () => console.log('HELLO'),
+  };
+
+
     return (
     <View style={{flex:1,}}>
         <View style={styles.cards}>
-            <TouchableOpacity style={styles.card}>
+			
+            <TouchableHighlight {...touchProps}>
+			
                 <View style={styles.bloc}>
+				
                     <View style={styles.left}>
                         <Image
                             style={styles.img}
@@ -16,10 +43,11 @@ const DisplayCardQuestion = (props) => {
                     </View>
                     <View style={styles.right}>
                         <Text style={styles.title}>{props.title}</Text>
-                        <Text style={styles.paragraph}>{props.desc}</Text>
+                        <Text {...touchText} >{props.desc}</Text>
                     </View>
+					<Text style={styles.btnZoom}>V</Text>
                 </View>
-            </TouchableOpacity>
+            </TouchableHighlight>
         </View>
     </View>
     );
@@ -53,7 +81,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 	},
 	right: {
-		width: "75%",
+		width: "72%",
 	},
 	img: {
 		backgroundColor: "white",
@@ -71,6 +99,31 @@ const styles = StyleSheet.create({
 		fontSize: 12,
 		fontStyle: 'italic',
 	},
+
+	paragraphPress: {
+		color: "#525252",
+		fontSize: 22,
+		fontStyle: 'italic',
+		
+	},
+
+	cardPress: {
+		padding: 5,
+		margin: 5,
+		borderColor: "black",
+		borderRadius: 15,
+		borderWidth: 1,
+		width: 300,
+		height: 150,
+        shadowColor: "#adadad",
+        shadowRadius: 2,
+		shadowOpacity: 1,
+        shadowOffset: {
+            width: 5,
+            height: 5,
+	  },
+	},
+
 });
 
 export default DisplayCardQuestion;
