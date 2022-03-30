@@ -28,12 +28,8 @@ export default function ChoixImage() {
 
         {image && <Image source={{ uri: image }} style={styles.img}/>}
 
-          <View style={styles.lol}>
-              <Text onPress={pickImage} style={{color: "#fff"}}>+</Text>
-          </View>
-
         <View style={styles.btnAdd}>
-            <Text onPress={pickImage} style={styles.btnInput}  >+</Text>
+            <Text onPress={pickImage} style={styles.btnInput} >+</Text>
         </View>
     </View>
 
@@ -42,6 +38,7 @@ export default function ChoixImage() {
 const styles = StyleSheet.create({
 
   propsAvatar: {
+    flex:1,
     alignItems: 'center',
     justifyContent: 'center',
     borderColor: "black",
