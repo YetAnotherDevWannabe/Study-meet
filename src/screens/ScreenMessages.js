@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, View, Image, StyleSheet, Alert, ScrollView, FlatList } from "react-native";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 import { Container, Card, UserInfo, UserImgWrapper, UserImg, UserInfoText, UserName, PostTime, TextSection,	MessageText } from "../styles/MessageStyle";
+import SearchBar from "../components/SearchBar";
 import {wsc, hsc} from "../G";
 
 //#region Message JSON
@@ -77,7 +78,11 @@ const Messages = [
 const ScreenMessages = ( { route, navigation } ) => {
 	console.log("Route", route)
 	return (
-		<Container style={{marginTop: 30}}>
+		<Container style={styles.container}>
+			<View style={styles.searchBarContainer}>
+				<Text style={styles.text} >Mes Messages</Text>
+				<SearchBar style={styles.searchBar}/>
+			</View>
 			<FlatList
 				showsVerticalScrollIndicator={false}
 				data={Messages}
@@ -102,5 +107,23 @@ const ScreenMessages = ( { route, navigation } ) => {
 		</Container>
 	)
 }
+
+const styles = StyleSheet.create({
+	container: {
+		marginTop: 30,
+		width: wsc,
+		height: hsc,
+	},
+	searchBarContainer: {
+		padding: 10,
+		width: 400,
+	},
+	text: {
+		margin: 5,
+		fontWeight: "bold",
+		fontSize: 18,
+		color: "black",
+	},
+});
 
 export default ScreenMessages;

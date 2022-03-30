@@ -85,7 +85,7 @@ export default function HomeScreen()
 							Transports
 						</Text>
 						<View >
-							<SearchBar style={styles.searchBar}/>
+							<SearchBar/>
 						</View>
 						<View style={styles.map}>
 							<WebView source={{html: '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d173134.47372387716!2d5.0060054!3d47.3099203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f29d8ceffd9675%3A0x409ce34b31458d0!2s21000%20Dijon!5e0!3m2!1sfr!2sfr!4v1646820129923!5m2!1sfr!2sfr" width="100%" height="100%" style="" allowfullscreen="" loading="lazy"></iframe>'}} />	
@@ -122,9 +122,6 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		padding: 15,
 	},
-	segmentLeft: {
-
-	},
 	segmentRight: {
 		flex: 1,
 		flexDirection: "row",
@@ -151,6 +148,4 @@ const styles = StyleSheet.create({
 		marginBottom: 10,
 		height: 300,
 	},
-	catSection: {
-	}
 });
