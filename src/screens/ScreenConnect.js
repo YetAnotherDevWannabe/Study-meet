@@ -11,7 +11,7 @@ export default function ScreenConnect({route})
 	const { passwordVisibility, rightIcon, handlePasswordVisibility } = useTogglePasswordVisibility();
   	const [password, setPassword] = useState('');
 	const [email, setEmail] = useState('');
-	const [erreur, setErreur] = useState('');
+	const [messageError, setMessageError] = useState('');
 	const [validating, setValidating] = useState(false);
 	const navigation = useNavigation();
 
@@ -41,11 +41,12 @@ export default function ScreenConnect({route})
 					/* Redirect to accounts page */
 					// console.log('Home');
 					navigation.navigate('Home');
+					setMessageError('');
 					return true;
 				} 
 				/* A log message that is used to debug the code. */
 				// console.log('Failed to store auth');
-				setErreur('Email ou Mot de passe incorrect');
+				setMessageError('Email ou Mot de passe incorrect');
 				return false;
 			})
 			.catch((error) => {
@@ -126,7 +127,7 @@ export default function ScreenConnect({route})
 							}
 						}}/>
 						<View>
-							<Text style={styles.error}>{erreur}</Text>
+							<Text style={styles.messageError}>{messageError}</Text>
 						</View>
 				</View>
 			</SafeAreaView>
@@ -153,12 +154,19 @@ const styles = StyleSheet.create({
 		marginStart: 15,
 		marginBottom: 2,
 	},
-	error: {
+	messageError: {
 		fontSize: 16,
 		fontWeight: "bold",
-		margin: 15,
+		marginTop: 15,
 		textAlign: "center",
 		color: '#FF0000',
+	},
+	messageSuccess: {
+		fontSize: 16,
+		fontWeight: "bold",
+		marginBottom: 15,
+		textAlign: "center",
+		color: '#99FF66',
 	},
 	textInput: {
 		backgroundColor: 'white',
