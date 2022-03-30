@@ -13,6 +13,7 @@ import ScreenProfil from './src/screens/ScreenProfil';
 import ScreenConnect from './src/screens/ScreenConnect';
 
 import ConversationNavigation from "./src/navigation/ConversationNavigation";
+import FAQNavigation from "./src/navigation/FAQNavigation";
 import LoginStackNavigation from "./src/navigation/LoginStackNavigation";
 
 const TabNav = createBottomTabNavigator();
@@ -38,7 +39,7 @@ export default function App() {
         />
         <TabNav.Screen
           name = "FAQ"
-          component = { ScreenFAQ }
+          component = { FAQNavigation }
           options = {{ tabBarIcon: ({size, color}) => (<Icon name={"help-circle-outline"} color={color} size={size} />) }}
         />
         <TabNav.Screen

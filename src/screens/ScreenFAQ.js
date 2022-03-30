@@ -15,21 +15,30 @@ export default function ScreenFAQ({route, navigation})
 					</Text>
 				</View>
 				<View>
-					<View style={styles.row}>
-						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
-					</View>
-					<View style={styles.row}>
-						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
-					</View>
-					<View style={styles.row}>
-						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
-					</View>
-					<View style={styles.row}>
-						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
-					</View>
-					<TouchableOpacity style={styles.plusInfo}>
-						<Text style={styles.contentInfo}>Voir Plus</Text>
+					<TouchableOpacity onPress={() => navigation.navigate('Question')}>
+						<View style={styles.row}>
+							<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
+						</View>
 					</TouchableOpacity>
+					
+					<TouchableOpacity onPress={() => navigation.navigate('Question')}>
+						<View style={styles.row}>
+							<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
+						</View>
+					</TouchableOpacity>
+
+					<TouchableOpacity onPress={() => navigation.navigate('Question')}>
+						<View style={styles.row}>
+							<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
+						</View>
+					</TouchableOpacity>
+
+					<TouchableOpacity onPress={() => navigation.navigate('Question')}>
+						<View style={styles.row}>
+							<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
+						</View>
+					</TouchableOpacity>
+					
 				</View>
 				<View >
 					<Text style={styles.category}>
@@ -37,21 +46,30 @@ export default function ScreenFAQ({route, navigation})
 					</Text>
 				</View>
 				<View>
-					<View style={styles.row}>
-						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
-					</View>
-					<View style={styles.row}>
-						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
-					</View>
-					<View style={styles.row}>
-						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
-					</View>
-					<View style={styles.row}>
-						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
-					</View>
-					<View style={styles.row}>
-						<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
-					</View>
+					<TouchableOpacity onPress={() => navigation.navigate('Question')}>
+						<View style={styles.row}>
+							<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
+						</View>
+					</TouchableOpacity>
+
+					<TouchableOpacity onPress={() => navigation.navigate('Question')}>
+						<View style={styles.row}>
+							<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
+						</View>
+					</TouchableOpacity>
+
+					<TouchableOpacity onPress={() => navigation.navigate('Question')}>
+						<View style={styles.row}>
+							<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
+						</View>
+					</TouchableOpacity>
+
+					<TouchableOpacity onPress={() => navigation.navigate('Question')}>
+						<View style={styles.row}>
+							<DisplayCardQuestion title="Titre de la FAQ" desc="Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus."/>
+						</View>
+					</TouchableOpacity>
+
 					<TouchableOpacity style={styles.plusInfoBot}>
 						<Text style={styles.contentInfo}>Voir Plus</Text>
 					</TouchableOpacity>
