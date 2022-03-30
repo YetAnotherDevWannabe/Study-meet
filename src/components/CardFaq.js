@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, Text, View, TouchableHighlight, StyleSheet, } from "react-native";
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 const DisplayCardQuestion = (props) => {
@@ -31,7 +32,7 @@ const DisplayCardQuestion = (props) => {
     <View style={{flex:1,}}>
         <View style={styles.cards}>
 			
-            <TouchableHighlight {...touchProps}>
+            <TouchableOpacity style={styles.card}>
 			
                 <View style={styles.bloc}>
 				
@@ -43,11 +44,11 @@ const DisplayCardQuestion = (props) => {
                     </View>
                     <View style={styles.right}>
                         <Text style={styles.title}>{props.title}</Text>
-                        <Text {...touchText} >{props.desc}</Text>
+                        <Text style={styles.paragraph} >{props.desc}</Text>
                     </View>
-					<Text style={styles.btnZoom}>V</Text>
+					{/* <Text style={styles.btnZoom}>V</Text> */}
                 </View>
-            </TouchableHighlight>
+            </TouchableOpacity>
         </View>
     </View>
     );
@@ -100,29 +101,29 @@ const styles = StyleSheet.create({
 		fontStyle: 'italic',
 	},
 
-	paragraphPress: {
-		color: "#525252",
-		fontSize: 22,
-		fontStyle: 'italic',
+	// paragraphPress: {
+	// 	color: "#525252",
+	// 	fontSize: 22,
+	// 	fontStyle: 'italic',
 		
-	},
+	// },
 
-	cardPress: {
-		padding: 5,
-		margin: 5,
-		borderColor: "black",
-		borderRadius: 15,
-		borderWidth: 1,
-		width: 300,
-		height: 150,
-        shadowColor: "#adadad",
-        shadowRadius: 2,
-		shadowOpacity: 1,
-        shadowOffset: {
-            width: 5,
-            height: 5,
-	  },
-	},
+	// cardPress: {
+	// 	padding: 5,
+	// 	margin: 5,
+	// 	borderColor: "black",
+	// 	borderRadius: 15,
+	// 	borderWidth: 1,
+	// 	width: 300,
+	// 	height: 150,
+    //     shadowColor: "#adadad",
+    //     shadowRadius: 2,
+	// 	shadowOpacity: 1,
+    //     shadowOffset: {
+    //         width: 5,
+    //         height: 5,
+	//   },
+	// },
 
 });
 
