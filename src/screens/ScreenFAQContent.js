@@ -6,6 +6,7 @@ import { Bubble, GiftedChat, Send } from 'react-native-gifted-chat'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Question from "../components/Question";
+import Reponse from "../components/Reponse";
 import { hsc, wsc } from "../G";
 
 import img from './../../assets/ask.jpg'
@@ -41,7 +42,7 @@ export default function ScreenFAQ({route, navigation})
 					/>
 				</Card>
 				<Card>		
-					<Question
+					<Reponse
 						userImg={img2}
 						userName="Léa"
 						messageTime="2d ago"
@@ -49,7 +50,7 @@ export default function ScreenFAQ({route, navigation})
 					/>
 				</Card>
 				<Card>		
-					<Question
+					<Reponse
 						userImg={img}
 						userName="Thomas"
 						messageTime="3h ago"

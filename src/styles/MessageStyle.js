@@ -39,6 +39,16 @@ export const TextSection = styled.View`
   border-bottom-color: #cccccc;
 `;
 
+export const TextAnswer= styled.View`
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  padding-left: 0;
+  margin-left: 10px;
+  width: 300px;
+  border-bottom-color: #cccccc;
+`;
+
 export const UserInfoText = styled.View`
   flex-direction: row;
   justify-content: space-between;
